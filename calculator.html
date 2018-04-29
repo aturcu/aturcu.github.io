@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Herd Immunity Calculator</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="calculator.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="calculator.html">Calculator</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="pertussis.html">Pertussis</a></li>
+      <li><a href="diphtheria.html">Diphtheria</a></li>
+      <li><a href="rubella.html">Rubella</a></li>
+      <li><a href="polio.html">Polio</a></li>
+      <li><a href="mumps.html">Mumps</a></li>
+      <li><a href="measles.html">Measles</a></li>
+      <li><a href="influenza.html">Influenza</a></li>
+    </ul>
+  </div>
+  </nav>
+  <body>
+    <div class="container">
+    <div class="jumbotron">
+    <h1>Herd Immunity Calculator</h1> 
+    <h4>Determines how many people need to be vaccinated to grant herd immunity in a population for a given disease</p> 
+    <p>Created by: Adrian Turcu and Eric Zhong</h4> 
+    <p>Vaccines Spring 2018</p> 
+    </div>
+     <form id="info">  <img src="herd_immunity.png" style="width:550px;height:340px;" align="right">
+        Disease: <br>
+         <input type="radio" name="disease" value="pertussis"> Pertussis<br>
+         <input type="radio" name="disease"value="diphtheria"> Diphtheria<br>
+         <input type="radio" name="disease" value="rubella"> Rubella<br>
+         <input type="radio" name="disease" value="polio"> Polio<br>
+         <input type="radio" name="disease" value="mumps"> Mumps<br>
+         <input type="radio" name="disease" value="measles"> Measles<br>
+         <input type="radio" name="disease" value="influenza"> Influenza<br>
+         <br>
+         Population Size: <br>
+         <input id = "population" type = "text">
+         <br>  
+         <br>
+         Number of people vaccinated (for disease incidence calculation only)<br>
+         <input id = "vaccinated" type = "text">
+         <br>
+         <br>     
+         <input id = "subbut1" type="submit" value="Calculate Coverage Needed">
+         <input id = "subbut2" type="submit" value="Calculate Disease Incidence">  
+     </form>
+     <br>
+     <ul style="list-style-type:none;font-size:20px;font-weight:bold;background-color:whitesmoke" id="list"> </ul>
+     <br>
+     <h2>About Herd Immunity</h2>
+     Although vaccination is a very powerful tool for medicine, not everyone receives a vaccine. Contraindications, such as allergies, prevent the use of a medical intervention. Herd immunity, the concept that individuals will be protected from a disease if other in the population are vaccinated against it, provides protection for those individuals who cannot receive the vaccine for medical purposes. Herd immunity relies on the vaccination rate of the rest of the population; if vaccinations fall below a certain threshold, those who did not receive a vaccine are at a greater risk of contracting and dying from the disease. Those who refuse a vaccine are putting not only themselves and their loved ones but also other members of their community at risk of infectious disease. We have developed this herd immunity calculator with two goals in mind: educating the public about the importance of vaccination and the need to take into account people who cannot get a vaccine for medical reasons and educating people about the diseases that these vaccines are meant to prevent. We have designed the material on this website so that it is accessible to the public and scientifically accurate.
+     <br>
+     <h2>Calculations</h2>
+     When calculating the herd immunity threshold, the reproductive rate of the pathogens and the effectiveness of the vaccine being used must be considered. Specifically, we can use the following formula to compute what proportion of the population has to be vaccinated to grant herd immunity (where V is the proportion of the population that needs to be vaccinated for herd immunity to be present, R is the reproductive rate of the pathogen, and E is the effectiveness of the vaccine): 
+     <br>
+     <h4 style="text-indent:400px"> V = ( 1 - ( 1 / R ) ) / E </h4>
+     <br>
+     To calculate the approximate number of people that will contract a disease, the proportion of the population that has been vaccinated must be known, as well as the reproductive rate of the pathogen and the effectiveness of the vaccine. The formula below can be used to compute this value (where D is the number of people that get the disease, R is the reproductive rate of the pathogen, E is the effectiveness of the vaccine, and P is the proportion of the population that has been vaccinated):
+     <br>
+     <h4 style="text-indent:380px"> D = ( 1 - ( 1 / R ) ) - ( E x P ) </h4>
+     <br>
+     <br>
+     <p style="font-size:10px">Adapted from:<br>
+     1. Fine, P., Eames, K., and Heyman, D.L. (2011). “Herd Immunity”: A Rough Guide. Clinical Infectious Diseases, 52(7), 911-16. 
+   </p>
+  </body>
+</html>
