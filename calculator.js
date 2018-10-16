@@ -29,7 +29,7 @@ window.addEventListener('load', function() {
 	        		r_0 = 5.5;
 	        		effectiveness = .80;
 	        		break;
-	    		case "diptheria":
+	    		case "diphtheria":
 	        		r_0 = 6.5;
 	        		effectiveness = .95;
 	        		break;
@@ -116,7 +116,7 @@ window.addEventListener('load', function() {
 	        		r_0 = 5.5;
 	        		effectiveness = .80;
 	        		break;
-	    		case "diptheria":
+	    		case "diphtheria":
 	        		r_0 = 6.5;
 	        		effectiveness = .95;
 	        		break;
